@@ -16,6 +16,7 @@ class TokenType(Enum):
     ASSIGN=auto()#=
     COMMA=auto()#,
     DIVISION=auto()
+    DOUBLE = auto()
     ELSE=auto()
     EOF=auto()#nada
     EQ=auto()#==

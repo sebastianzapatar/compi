@@ -112,6 +112,14 @@ class Lexer:
                 token = Token(TokenType.NOE, "!=")
             else:
                 token = Token(TokenType.NOT, self._current_char)
+        elif match(r'^\($',self._current_char):
+            token=Token(TokenType.LPAREN,self._current_char)
+        elif match(r'^\)$',self._current_char):
+            token=Token(TokenType.RPAREN,self._current_char)
+        elif match(r'^-$',self._current_char):
+            token=Token(TokenType.MINUS, self._current_char)
+        elif match(r'^\*$', self._current_char):
+            token=Token(TokenType.MULTIPLICATION, self._current_char)
         elif self.is_letter(self._current_char):
             literal=self._read_identifier()
             token_type=lookup_token_type(literal)

@@ -29,12 +29,16 @@ class TokenType(Enum):
     ILLEGAL=auto()#?´~
     INT=auto()#int
     LET=auto()#Let para asignar variables
+    LPAREN=auto()#(
     LT=auto()#<
     LTE=auto()#<=
+    MULTIPLICATION=auto()
+    MINUS=auto()
     NOE=auto()#!=
     NOT=auto()#!
     PLUS=auto()#+
     RETURN= auto()
+    RPAREN=auto()#)
     SEMICOLON=auto()#;
     TRUE= auto()
 class Token(NamedTuple):
